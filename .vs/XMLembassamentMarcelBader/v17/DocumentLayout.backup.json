@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\XMLembassamentMarcelBader\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ADD9EDAB-61A7-4DD4-A4C0-B0A1E933F577}|XMLembassamentMarcelBader\\XMLembassamentMarcelBader.csproj|c:\\users\\usuario\\desktop\\xmlembassamentmarcelbader\\xmlembassamentmarcelbader\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ADD9EDAB-61A7-4DD4-A4C0-B0A1E933F577}|XMLembassamentMarcelBader\\XMLembassamentMarcelBader.csproj|solutionrelative:xmlembassamentmarcelbader\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{ADD9EDAB-61A7-4DD4-A4C0-B0A1E933F577}|XMLembassamentMarcelBader\\XMLembassamentMarcelBader.csproj|c:\\users\\usuario\\desktop\\xmlembassamentmarcelbader\\xmlembassamentmarcelbader\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADD9EDAB-61A7-4DD4-A4C0-B0A1E933F577}|XMLembassamentMarcelBader\\XMLembassamentMarcelBader.csproj|solutionrelative:xmlembassamentmarcelbader\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADD9EDAB-61A7-4DD4-A4C0-B0A1E933F577}|XMLembassamentMarcelBader\\XMLembassamentMarcelBader.csproj|c:\\users\\usuario\\desktop\\xmlembassamentmarcelbader\\xmlembassamentmarcelbader\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADD9EDAB-61A7-4DD4-A4C0-B0A1E933F577}|XMLembassamentMarcelBader\\XMLembassamentMarcelBader.csproj|solutionrelative:xmlembassamentmarcelbader\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -25,20 +29,33 @@
               "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmMain.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\XMLembassamentMarcelBader\\XMLembassamentMarcelBader\\FrmMain.cs",
+              "RelativeDocumentMoniker": "XMLembassamentMarcelBader\\FrmMain.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\XMLembassamentMarcelBader\\XMLembassamentMarcelBader\\FrmMain.cs*",
+              "RelativeToolTip": "XMLembassamentMarcelBader\\FrmMain.cs*",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T13:32:50.66Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\XMLembassamentMarcelBader\\XMLembassamentMarcelBader\\Form1.cs",
-              "RelativeDocumentMoniker": "XMLembassamentMarcelBader\\Form1.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\XMLembassamentMarcelBader\\XMLembassamentMarcelBader\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "XMLembassamentMarcelBader\\Form1.cs [Dise\u00F1o]",
+              "Title": "FrmMain.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\XMLembassamentMarcelBader\\XMLembassamentMarcelBader\\FrmMain.cs",
+              "RelativeDocumentMoniker": "XMLembassamentMarcelBader\\FrmMain.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\XMLembassamentMarcelBader\\XMLembassamentMarcelBader\\FrmMain.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "XMLembassamentMarcelBader\\FrmMain.cs [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-09T20:19:23.384Z",
               "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         }
