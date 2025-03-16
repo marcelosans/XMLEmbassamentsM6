@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Embalses>
+  <row>
+    <dia>2024-03-15T00:00:00</dia>
+    <estaci>Embassament de la Llosa del Cavall (Navès)</estaci>
+    <nivell_absolut>764.73</nivell_absolut>
+    <percentatge_volum_embassat>16100</percentatge_volum_embassat>
+    <volum_embassat>129</volum_embassat>
+  </row>
+  <row>
+    <dia>2024-03-15T00:00:00</dia>
+    <estaci>Embassament de Darnius Boadella (Darnius)</estaci>
+    <nivell_absolut>132.51</nivell_absolut>
+    <percentatge_volum_embassat>11700</percentatge_volum_embassat>
+    <volum_embassat>712</volum_embassat>
+  </row>
+  <row>
+    <dia>2024-03-15T00:00:00</dia>
+    <estaci>Embassament de Sant Ponç (Clariana de Cardener)</estaci>
+    <nivell_absolut>512.67</nivell_absolut>
+    <percentatge_volum_embassat>27500</percentatge_volum_embassat>
+    <volum_embassat>67</volum_embassat>
+  </row>
+  <row>
+    <dia>2024-03-15T00:00:00</dia>
+    <estaci>Embassament de la Baells (Cercs)</estaci>
+    <nivell_absolut>591.35</nivell_absolut>
+    <percentatge_volum_embassat>19900</percentatge_volum_embassat>
+    <volum_embassat>2177</volum_embassat>
+  </row>
+  <row>
+    <dia>2024-03-15T00:00:00</dia>
+    <estaci>Embassament de Susqueda (Osor)</estaci>
+    <nivell_absolut>300.36</nivell_absolut>
+    <percentatge_volum_embassat>20500</percentatge_volum_embassat>
+    <volum_embassat>4772</volum_embassat>
+  </row>
+</Embalses>

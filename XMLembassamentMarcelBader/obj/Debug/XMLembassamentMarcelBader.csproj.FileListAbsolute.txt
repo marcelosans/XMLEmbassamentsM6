@@ -8,3 +8,13 @@ C:\Users\Usuario\Desktop\XMLembassamentMarcelBader\XMLembassamentMarcelBader\obj
 C:\Users\Usuario\Desktop\XMLembassamentMarcelBader\XMLembassamentMarcelBader\obj\Debug\XMLembassamentMarcelBader.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Desktop\XMLembassamentMarcelBader\XMLembassamentMarcelBader\obj\Debug\XMLembassamentMarcelBader.exe
 C:\Users\Usuario\Desktop\XMLembassamentMarcelBader\XMLembassamentMarcelBader\obj\Debug\XMLembassamentMarcelBader.pdb
+D:\DAM2\M6\UF3\XMLEmbassamentsM6\XMLembassamentMarcelBader\bin\Debug\XMLembassamentMarcelBader.exe.config
+D:\DAM2\M6\UF3\XMLEmbassamentsM6\XMLembassamentMarcelBader\bin\Debug\XMLembassamentMarcelBader.exe
+D:\DAM2\M6\UF3\XMLEmbassamentsM6\XMLembassamentMarcelBader\bin\Debug\XMLembassamentMarcelBader.pdb
+D:\DAM2\M6\UF3\XMLEmbassamentsM6\XMLembassamentMarcelBader\obj\Debug\XMLembassamentMarcelBader.csproj.AssemblyReference.cache
+D:\DAM2\M6\UF3\XMLEmbassamentsM6\XMLembassamentMarcelBader\obj\Debug\XMLembassamentMarcelBader.FrmMain.resources
+D:\DAM2\M6\UF3\XMLEmbassamentsM6\XMLembassamentMarcelBader\obj\Debug\XMLembassamentMarcelBader.Properties.Resources.resources
+D:\DAM2\M6\UF3\XMLEmbassamentsM6\XMLembassamentMarcelBader\obj\Debug\XMLembassamentMarcelBader.csproj.GenerateResource.cache
+D:\DAM2\M6\UF3\XMLEmbassamentsM6\XMLembassamentMarcelBader\obj\Debug\XMLembassamentMarcelBader.csproj.CoreCompileInputs.cache
+D:\DAM2\M6\UF3\XMLEmbassamentsM6\XMLembassamentMarcelBader\obj\Debug\XMLembassamentMarcelBader.exe
+D:\DAM2\M6\UF3\XMLEmbassamentsM6\XMLembassamentMarcelBader\obj\Debug\XMLembassamentMarcelBader.pdb
