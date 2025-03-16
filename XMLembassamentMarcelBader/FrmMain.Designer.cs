@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnExaminar = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -38,6 +38,7 @@
             this.btnMostrar = new System.Windows.Forms.Button();
             this.llEstacio = new System.Windows.Forms.ListBox();
             this.gbDades = new System.Windows.Forms.GroupBox();
+            this.cbInterval = new System.Windows.Forms.CheckBox();
             this.lbInterval = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.nudMax = new System.Windows.Forms.NumericUpDown();
@@ -51,7 +52,7 @@
             this.lbPromigPercentatge = new System.Windows.Forms.Label();
             this.btCrearXMLContingut = new System.Windows.Forms.Button();
             this.pbMaps = new System.Windows.Forms.PictureBox();
-            this.cbInterval = new System.Windows.Forms.CheckBox();
+            this.btDel = new System.Windows.Forms.Button();
             this.gbFitxerXML.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDades)).BeginInit();
             this.gbDades.SuspendLayout();
@@ -102,9 +103,9 @@
             this.dgDades.AllowUserToAddRows = false;
             this.dgDades.AllowUserToDeleteRows = false;
             this.dgDades.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dgDades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgDades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgDades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgDades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDades.Location = new System.Drawing.Point(349, 163);
@@ -170,6 +171,16 @@
             this.gbDades.TabIndex = 8;
             this.gbDades.TabStop = false;
             this.gbDades.Text = "Dades";
+            // 
+            // cbInterval
+            // 
+            this.cbInterval.AutoSize = true;
+            this.cbInterval.Location = new System.Drawing.Point(30, 88);
+            this.cbInterval.Name = "cbInterval";
+            this.cbInterval.Size = new System.Drawing.Size(15, 14);
+            this.cbInterval.TabIndex = 11;
+            this.cbInterval.UseVisualStyleBackColor = true;
+            this.cbInterval.CheckedChanged += new System.EventHandler(this.cbInterval_CheckedChanged);
             // 
             // lbInterval
             // 
@@ -298,21 +309,24 @@
             this.pbMaps.TabStop = false;
             this.pbMaps.Click += new System.EventHandler(this.pbMaps_Click_1);
             // 
-            // cbInterval
+            // btDel
             // 
-            this.cbInterval.AutoSize = true;
-            this.cbInterval.Location = new System.Drawing.Point(30, 88);
-            this.cbInterval.Name = "cbInterval";
-            this.cbInterval.Size = new System.Drawing.Size(15, 14);
-            this.cbInterval.TabIndex = 11;
-            this.cbInterval.UseVisualStyleBackColor = true;
-            this.cbInterval.CheckedChanged += new System.EventHandler(this.cbInterval_CheckedChanged);
+            this.btDel.BackColor = System.Drawing.Color.LightGreen;
+            this.btDel.Font = new System.Drawing.Font("Verdana", 10F);
+            this.btDel.Location = new System.Drawing.Point(489, 559);
+            this.btDel.Name = "btDel";
+            this.btDel.Size = new System.Drawing.Size(134, 58);
+            this.btDel.TabIndex = 16;
+            this.btDel.Text = "Eliminar camp";
+            this.btDel.UseVisualStyleBackColor = false;
+            this.btDel.Click += new System.EventHandler(this.btDel_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 628);
+            this.Controls.Add(this.btDel);
             this.Controls.Add(this.pbMaps);
             this.Controls.Add(this.btCrearXMLContingut);
             this.Controls.Add(this.lbPromigPercentatge);
@@ -364,6 +378,7 @@
         private System.Windows.Forms.Label lbInterval;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.CheckBox cbInterval;
+        private System.Windows.Forms.Button btDel;
     }
 }
 

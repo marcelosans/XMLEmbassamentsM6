@@ -35,7 +35,6 @@ namespace XMLembassamentMarcelBader
                 navegador = document.CreateNavigator();
                 omplirListBox();
                 iniColumnas();
-                
             }
         }
 
@@ -46,7 +45,6 @@ namespace XMLembassamentMarcelBader
             dgDades.Columns.Add("nivell_absolut", "Nivell Absolut");
             dgDades.Columns.Add("percentatge_volum_embassat", "Percentatge Volum Embassat");
             dgDades.Columns.Add("volum_embassat", "Volum Embassat");
-
         }
 
         private void omplirListBox()
@@ -72,7 +70,6 @@ namespace XMLembassamentMarcelBader
                     }
                 }
             }
-
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
@@ -132,8 +129,7 @@ namespace XMLembassamentMarcelBader
                 txtProVolum.Text = "0.00";
             }
 
-            txtTotalVol.Text = total.ToString("F2");                                                                            
-
+            txtTotalVol.Text = total.ToString("F2");     
         }
 
         private void btCrearXMLContingut_Click_1(object sender, EventArgs e)
@@ -188,6 +184,19 @@ namespace XMLembassamentMarcelBader
             dateTimePicker2.Enabled = cbInterval.Checked;
         }
 
-        
+        private void btDel_Click(object sender, EventArgs e)
+        {
+            if (dgDades.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgDades.SelectedRows)
+                {
+                    dgDades.Rows.Remove(row);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una fila para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
