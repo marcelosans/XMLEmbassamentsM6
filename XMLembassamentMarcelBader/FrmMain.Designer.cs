@@ -28,18 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnExaminar = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.gbFitxerXML = new System.Windows.Forms.GroupBox();
-            this.dgPoligons = new System.Windows.Forms.DataGridView();
+            this.dgDades = new System.Windows.Forms.DataGridView();
+            this.lbDia = new System.Windows.Forms.Label();
+            this.btnMostrar = new System.Windows.Forms.Button();
+            this.llEstacio = new System.Windows.Forms.ListBox();
             this.gbDades = new System.Windows.Forms.GroupBox();
-            this.dataEmbassament = new System.Windows.Forms.DateTimePicker();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.nudMax = new System.Windows.Forms.NumericUpDown();
+            this.nudMin = new System.Windows.Forms.NumericUpDown();
+            this.lbVolMax = new System.Windows.Forms.Label();
+            this.lbVolMin = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtTotalVol = new System.Windows.Forms.TextBox();
+            this.txtProVolum = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbPromigPercentatge = new System.Windows.Forms.Label();
             this.gbFitxerXML.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgPoligons)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDades)).BeginInit();
             this.gbDades.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMin)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -75,68 +87,169 @@
             this.gbFitxerXML.TabStop = false;
             this.gbFitxerXML.Text = "Fitxer XML";
             // 
-            // dgPoligons
+            // dgDades
             // 
-            this.dgPoligons.AllowUserToAddRows = false;
-            this.dgPoligons.AllowUserToDeleteRows = false;
-            this.dgPoligons.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dgPoligons.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgPoligons.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgPoligons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPoligons.Location = new System.Drawing.Point(328, 154);
-            this.dgPoligons.MultiSelect = false;
-            this.dgPoligons.Name = "dgPoligons";
-            this.dgPoligons.ReadOnly = true;
-            this.dgPoligons.RowHeadersVisible = false;
-            this.dgPoligons.RowHeadersWidth = 51;
-            this.dgPoligons.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgPoligons.Size = new System.Drawing.Size(872, 380);
-            this.dgPoligons.TabIndex = 5;
+            this.dgDades.AllowUserToAddRows = false;
+            this.dgDades.AllowUserToDeleteRows = false;
+            this.dgDades.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgDades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgDades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgDades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgDades.Location = new System.Drawing.Point(465, 201);
+            this.dgDades.MultiSelect = false;
+            this.dgDades.Name = "dgDades";
+            this.dgDades.ReadOnly = true;
+            this.dgDades.RowHeadersVisible = false;
+            this.dgDades.RowHeadersWidth = 51;
+            this.dgDades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgDades.Size = new System.Drawing.Size(735, 380);
+            this.dgDades.TabIndex = 5;
+            // 
+            // lbDia
+            // 
+            this.lbDia.AutoSize = true;
+            this.lbDia.Location = new System.Drawing.Point(32, 35);
+            this.lbDia.Name = "lbDia";
+            this.lbDia.Size = new System.Drawing.Size(31, 16);
+            this.lbDia.TabIndex = 3;
+            this.lbDia.Text = "Dia:";
+            // 
+            // btnMostrar
+            // 
+            this.btnMostrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnMostrar.Location = new System.Drawing.Point(230, 618);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(154, 49);
+            this.btnMostrar.TabIndex = 9;
+            this.btnMostrar.Text = "Mostrar dades";
+            this.btnMostrar.UseVisualStyleBackColor = false;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            // 
+            // llEstacio
+            // 
+            this.llEstacio.FormattingEnabled = true;
+            this.llEstacio.ItemHeight = 16;
+            this.llEstacio.Location = new System.Drawing.Point(29, 142);
+            this.llEstacio.Name = "llEstacio";
+            this.llEstacio.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.llEstacio.Size = new System.Drawing.Size(299, 276);
+            this.llEstacio.TabIndex = 1;
             // 
             // gbDades
             // 
-            this.gbDades.Controls.Add(this.listBox1);
-            this.gbDades.Controls.Add(this.dataEmbassament);
+            this.gbDades.Controls.Add(this.nudMax);
+            this.gbDades.Controls.Add(this.nudMin);
+            this.gbDades.Controls.Add(this.lbVolMax);
+            this.gbDades.Controls.Add(this.lbVolMin);
+            this.gbDades.Controls.Add(this.dateTimePicker1);
+            this.gbDades.Controls.Add(this.llEstacio);
+            this.gbDades.Controls.Add(this.lbDia);
             this.gbDades.Location = new System.Drawing.Point(24, 154);
             this.gbDades.Name = "gbDades";
-            this.gbDades.Size = new System.Drawing.Size(288, 394);
+            this.gbDades.Size = new System.Drawing.Size(360, 441);
             this.gbDades.TabIndex = 8;
             this.gbDades.TabStop = false;
             this.gbDades.Text = "Dades";
             // 
-            // dataEmbassament
+            // nudMax
             // 
-            this.dataEmbassament.Location = new System.Drawing.Point(22, 40);
-            this.dataEmbassament.Name = "dataEmbassament";
-            this.dataEmbassament.Size = new System.Drawing.Size(244, 22);
-            this.dataEmbassament.TabIndex = 0;
+            this.nudMax.Location = new System.Drawing.Point(197, 103);
+            this.nudMax.Name = "nudMax";
+            this.nudMax.Size = new System.Drawing.Size(120, 22);
+            this.nudMax.TabIndex = 8;
             // 
-            // listBox1
+            // nudMin
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(22, 84);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(244, 276);
-            this.listBox1.TabIndex = 1;
+            this.nudMin.Location = new System.Drawing.Point(197, 71);
+            this.nudMin.Name = "nudMin";
+            this.nudMin.Size = new System.Drawing.Size(120, 22);
+            this.nudMin.TabIndex = 7;
+            // 
+            // lbVolMax
+            // 
+            this.lbVolMax.AutoSize = true;
+            this.lbVolMax.Location = new System.Drawing.Point(32, 103);
+            this.lbVolMax.Name = "lbVolMax";
+            this.lbVolMax.Size = new System.Drawing.Size(152, 16);
+            this.lbVolMax.TabIndex = 6;
+            this.lbVolMax.Text = "Percentatge Volum Max:";
+            // 
+            // lbVolMin
+            // 
+            this.lbVolMin.AutoSize = true;
+            this.lbVolMin.Location = new System.Drawing.Point(32, 73);
+            this.lbVolMin.Name = "lbVolMin";
+            this.lbVolMin.Size = new System.Drawing.Size(148, 16);
+            this.lbVolMin.TabIndex = 5;
+            this.lbVolMin.Text = "Percentatge Volum Min:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(71, 30);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(257, 22);
+            this.dateTimePicker1.TabIndex = 4;
+            // 
+            // txtTotalVol
+            // 
+            this.txtTotalVol.Enabled = false;
+            this.txtTotalVol.Location = new System.Drawing.Point(616, 163);
+            this.txtTotalVol.Name = "txtTotalVol";
+            this.txtTotalVol.Size = new System.Drawing.Size(161, 22);
+            this.txtTotalVol.TabIndex = 10;
+            // 
+            // txtProVolum
+            // 
+            this.txtProVolum.Enabled = false;
+            this.txtProVolum.Location = new System.Drawing.Point(940, 163);
+            this.txtProVolum.Name = "txtProVolum";
+            this.txtProVolum.Size = new System.Drawing.Size(161, 22);
+            this.txtProVolum.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(455, 166);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 16);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Total Volum Embassat";
+            // 
+            // lbPromigPercentatge
+            // 
+            this.lbPromigPercentatge.AutoSize = true;
+            this.lbPromigPercentatge.Location = new System.Drawing.Point(854, 166);
+            this.lbPromigPercentatge.Name = "lbPromigPercentatge";
+            this.lbPromigPercentatge.Size = new System.Drawing.Size(71, 16);
+            this.lbPromigPercentatge.TabIndex = 13;
+            this.lbPromigPercentatge.Text = "Promig   %";
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1257, 629);
+            this.ClientSize = new System.Drawing.Size(1257, 701);
+            this.Controls.Add(this.lbPromigPercentatge);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtProVolum);
+            this.Controls.Add(this.txtTotalVol);
+            this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.gbDades);
-            this.Controls.Add(this.dgPoligons);
+            this.Controls.Add(this.dgDades);
             this.Controls.Add(this.gbFitxerXML);
             this.Name = "FrmMain";
-            this.Text = "Form1";
+            this.Text = "XML EMBASSAMENTS";
             this.gbFitxerXML.ResumeLayout(false);
             this.gbFitxerXML.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgPoligons)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDades)).EndInit();
             this.gbDades.ResumeLayout(false);
+            this.gbDades.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMin)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -145,10 +258,20 @@
         private System.Windows.Forms.Button btnExaminar;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.GroupBox gbFitxerXML;
-        private System.Windows.Forms.DataGridView dgPoligons;
+        private System.Windows.Forms.DataGridView dgDades;
+        private System.Windows.Forms.Label lbDia;
+        private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.ListBox llEstacio;
         private System.Windows.Forms.GroupBox gbDades;
-        private System.Windows.Forms.DateTimePicker dataEmbassament;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label lbVolMax;
+        private System.Windows.Forms.Label lbVolMin;
+        private System.Windows.Forms.NumericUpDown nudMax;
+        private System.Windows.Forms.NumericUpDown nudMin;
+        private System.Windows.Forms.TextBox txtTotalVol;
+        private System.Windows.Forms.TextBox txtProVolum;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbPromigPercentatge;
     }
 }
 
