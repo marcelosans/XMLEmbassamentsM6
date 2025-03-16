@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{ADD9EDAB-61A7-4DD4-A4C0-B0A1E933F577}|XMLembassamentMarcelBader\\XMLembassamentMarcelBader.csproj|solutionrelative:xmlembassamentmarcelbader\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADD9EDAB-61A7-4DD4-A4C0-B0A1E933F577}|XMLembassamentMarcelBader\\XMLembassamentMarcelBader.csproj|d:\\dam2\\m6\\uf3\\xmlembassamentsm6\\xmlembassamentmarcelbader\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ADD9EDAB-61A7-4DD4-A4C0-B0A1E933F577}|XMLembassamentMarcelBader\\XMLembassamentMarcelBader.csproj|D:\\DAM2\\M6\\UF3\\XMLEmbassamentsM6\\xmlembassamentmarcelbader\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADD9EDAB-61A7-4DD4-A4C0-B0A1E933F577}|XMLembassamentMarcelBader\\XMLembassamentMarcelBader.csproj|solutionrelative:xmlembassamentmarcelbader\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -34,20 +34,19 @@
               "RelativeToolTip": "XMLembassamentMarcelBader\\FrmMain.Designer.cs",
               "ViewState": "AgIAAB0BAAAAAAAAAAAWwDUBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T14:56:10.219Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T14:56:10.219Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FrmMain.cs [Dise\u00F1o]",
+              "Title": "FrmMain.cs [Design]",
               "DocumentMoniker": "D:\\DAM2\\M6\\UF3\\XMLEmbassamentsM6\\XMLembassamentMarcelBader\\FrmMain.cs",
               "RelativeDocumentMoniker": "XMLembassamentMarcelBader\\FrmMain.cs",
-              "ToolTip": "D:\\DAM2\\M6\\UF3\\XMLEmbassamentsM6\\XMLembassamentMarcelBader\\FrmMain.cs [Dise\u00F1o]",
-              "RelativeToolTip": "XMLembassamentMarcelBader\\FrmMain.cs [Dise\u00F1o]",
+              "ToolTip": "D:\\DAM2\\M6\\UF3\\XMLEmbassamentsM6\\XMLembassamentMarcelBader\\FrmMain.cs [Design]",
+              "RelativeToolTip": "XMLembassamentMarcelBader\\FrmMain.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-09T20:19:23.384Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -57,7 +56,7 @@
               "RelativeDocumentMoniker": "XMLembassamentMarcelBader\\FrmMain.cs",
               "ToolTip": "D:\\DAM2\\M6\\UF3\\XMLEmbassamentsM6\\XMLembassamentMarcelBader\\FrmMain.cs",
               "RelativeToolTip": "XMLembassamentMarcelBader\\FrmMain.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAcwIgAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAwwEMAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T13:32:50.66Z",
               "EditorCaption": ""

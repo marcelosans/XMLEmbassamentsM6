@@ -65,7 +65,7 @@ namespace XMLembassamentMarcelBader
                 if (EstacioNode != null)
                 {
                     string comarca = EstacioNode.Value;
-                    if (!EstacionsUniques.Contains(comarca)) // Evita duplicados
+                    if (!EstacionsUniques.Contains(comarca))
                     {
                         EstacionsUniques.Add(comarca);
                         llEstacio.Items.Add(comarca);
@@ -84,7 +84,6 @@ namespace XMLembassamentMarcelBader
             int veces = 0;
             string fechaSeleccionada = dateTimePicker1.Value.ToString("yyyy-MM-dd");
 
-            // Construimos la condición de embalses solo si hay selección
             string condicionEstaci = "";
             if (llEstacio.SelectedItems.Count > 0)
             {
@@ -96,7 +95,6 @@ namespace XMLembassamentMarcelBader
                 condicionEstaci = " and (" + string.Join(" or ", condicionesEstaci) + ")";
             }
 
-            // Expresión XPath que filtra por fecha, porcentaje y opcionalmente por embalses
             string query = $"//row/row[substring(dia, 1, 10) = '{fechaSeleccionada}' " +
                            $"and number(percentatge_volum_embassat) >= {nudMin.Value} " +
                            $"and number(percentatge_volum_embassat) <= {nudMax.Value} " +
@@ -134,7 +132,7 @@ namespace XMLembassamentMarcelBader
                 txtProVolum.Text = "0.00";
             }
 
-            txtTotalVol.Text = total.ToString("F2");
+            txtTotalVol.Text = total.ToString("F2");                                                                            
 
         }
 
