@@ -75,6 +75,9 @@ namespace XMLembassamentMarcelBader
         private void btnMostrar_Click(object sender, EventArgs e)
         {
                 dgDades.Rows.Clear();
+                float total = 0;
+                float percentatgeEmbassament = 0;
+                int veces = 0;
                 string fechaSeleccionada = dateTimePicker1.Value.ToString("yyyy-MM-dd");
                 XPathNodeIterator cursor = null;
                 XPathExpression expr = navegador.Compile($"//row/row[substring(dia, 1, 10) = '{fechaSeleccionada}' and number(percentatge_volum_embassat) >= {nudMin.Value} and number(percentatge_volum_embassat) <= {nudMax.Value}]");
@@ -82,17 +85,25 @@ namespace XMLembassamentMarcelBader
 
                 foreach (XPathNavigator nodo in cursor)
                 {
+                    float volumEmbassat = float.Parse(nodo.SelectSingleNode("volum_embassat")?.Value ?? "0");
+                    float percentatgeVolum = float.Parse(nodo.SelectSingleNode("percentatge_volum_embassat")?.Value ?? "0") * 100; 
+
+                    total += volumEmbassat;
+                    percentatgeEmbassament += percentatgeVolum;
+                    veces++;
+
                     string dia = nodo.SelectSingleNode("dia")?.Value ?? "";
                     string estaci = nodo.SelectSingleNode("estaci")?.Value ?? "";
                     string nivellAbsolut = nodo.SelectSingleNode("nivell_absolut")?.Value ?? "";
-                    string percentatgeVolum = nodo.SelectSingleNode("percentatge_volum_embassat")?.Value ?? "";
-                    string volumEmbassat = nodo.SelectSingleNode("volum_embassat")?.Value ?? "";
 
                     dgDades.Rows.Add(dia, estaci, nivellAbsolut, percentatgeVolum, volumEmbassat);
                 }
+                
+                float promig = percentatgeEmbassament / veces;
+                txtProVolum.Text = promig.ToString("F2");
+                txtTotalVol.Text = total.ToString("F2");
 
-            
-            
+
         }
     }
 }

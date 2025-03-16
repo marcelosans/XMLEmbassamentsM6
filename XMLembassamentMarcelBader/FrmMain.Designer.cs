@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnExaminar = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -38,20 +38,20 @@
             this.btnMostrar = new System.Windows.Forms.Button();
             this.llEstacio = new System.Windows.Forms.ListBox();
             this.gbDades = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.lbVolMin = new System.Windows.Forms.Label();
-            this.lbVolMax = new System.Windows.Forms.Label();
-            this.nudMin = new System.Windows.Forms.NumericUpDown();
             this.nudMax = new System.Windows.Forms.NumericUpDown();
+            this.nudMin = new System.Windows.Forms.NumericUpDown();
+            this.lbVolMax = new System.Windows.Forms.Label();
+            this.lbVolMin = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtTotalVol = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtProVolum = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbPromigPercentatge = new System.Windows.Forms.Label();
             this.gbFitxerXML.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDades)).BeginInit();
             this.gbDades.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMin)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -92,9 +92,9 @@
             this.dgDades.AllowUserToAddRows = false;
             this.dgDades.AllowUserToDeleteRows = false;
             this.dgDades.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dgDades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgDades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgDades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgDades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDades.Location = new System.Drawing.Point(465, 201);
@@ -153,21 +153,19 @@
             this.gbDades.TabStop = false;
             this.gbDades.Text = "Dades";
             // 
-            // dateTimePicker1
+            // nudMax
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(71, 30);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(257, 22);
-            this.dateTimePicker1.TabIndex = 4;
+            this.nudMax.Location = new System.Drawing.Point(197, 103);
+            this.nudMax.Name = "nudMax";
+            this.nudMax.Size = new System.Drawing.Size(120, 22);
+            this.nudMax.TabIndex = 8;
             // 
-            // lbVolMin
+            // nudMin
             // 
-            this.lbVolMin.AutoSize = true;
-            this.lbVolMin.Location = new System.Drawing.Point(32, 73);
-            this.lbVolMin.Name = "lbVolMin";
-            this.lbVolMin.Size = new System.Drawing.Size(148, 16);
-            this.lbVolMin.TabIndex = 5;
-            this.lbVolMin.Text = "Percentatge Volum Min:";
+            this.nudMin.Location = new System.Drawing.Point(197, 71);
+            this.nudMin.Name = "nudMin";
+            this.nudMin.Size = new System.Drawing.Size(120, 22);
+            this.nudMin.TabIndex = 7;
             // 
             // lbVolMax
             // 
@@ -178,33 +176,37 @@
             this.lbVolMax.TabIndex = 6;
             this.lbVolMax.Text = "Percentatge Volum Max:";
             // 
-            // nudMin
+            // lbVolMin
             // 
-            this.nudMin.Location = new System.Drawing.Point(197, 71);
-            this.nudMin.Name = "nudMin";
-            this.nudMin.Size = new System.Drawing.Size(120, 22);
-            this.nudMin.TabIndex = 7;
+            this.lbVolMin.AutoSize = true;
+            this.lbVolMin.Location = new System.Drawing.Point(32, 73);
+            this.lbVolMin.Name = "lbVolMin";
+            this.lbVolMin.Size = new System.Drawing.Size(148, 16);
+            this.lbVolMin.TabIndex = 5;
+            this.lbVolMin.Text = "Percentatge Volum Min:";
             // 
-            // nudMax
+            // dateTimePicker1
             // 
-            this.nudMax.Location = new System.Drawing.Point(197, 103);
-            this.nudMax.Name = "nudMax";
-            this.nudMax.Size = new System.Drawing.Size(120, 22);
-            this.nudMax.TabIndex = 8;
+            this.dateTimePicker1.Location = new System.Drawing.Point(71, 30);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(257, 22);
+            this.dateTimePicker1.TabIndex = 4;
             // 
             // txtTotalVol
             // 
+            this.txtTotalVol.Enabled = false;
             this.txtTotalVol.Location = new System.Drawing.Point(616, 163);
             this.txtTotalVol.Name = "txtTotalVol";
             this.txtTotalVol.Size = new System.Drawing.Size(161, 22);
             this.txtTotalVol.TabIndex = 10;
             // 
-            // textBox3
+            // txtProVolum
             // 
-            this.textBox3.Location = new System.Drawing.Point(940, 163);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(161, 22);
-            this.textBox3.TabIndex = 11;
+            this.txtProVolum.Enabled = false;
+            this.txtProVolum.Location = new System.Drawing.Point(940, 163);
+            this.txtProVolum.Name = "txtProVolum";
+            this.txtProVolum.Size = new System.Drawing.Size(161, 22);
+            this.txtProVolum.TabIndex = 11;
             // 
             // label1
             // 
@@ -215,37 +217,37 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Total Volum Embassat";
             // 
-            // label2
+            // lbPromigPercentatge
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(870, 163);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "label2";
+            this.lbPromigPercentatge.AutoSize = true;
+            this.lbPromigPercentatge.Location = new System.Drawing.Point(854, 166);
+            this.lbPromigPercentatge.Name = "lbPromigPercentatge";
+            this.lbPromigPercentatge.Size = new System.Drawing.Size(71, 16);
+            this.lbPromigPercentatge.TabIndex = 13;
+            this.lbPromigPercentatge.Text = "Promig   %";
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1257, 701);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbPromigPercentatge);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtProVolum);
             this.Controls.Add(this.txtTotalVol);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.gbDades);
             this.Controls.Add(this.dgDades);
             this.Controls.Add(this.gbFitxerXML);
             this.Name = "FrmMain";
-            this.Text = "Form1";
+            this.Text = "XML EMBASSAMENTS";
             this.gbFitxerXML.ResumeLayout(false);
             this.gbFitxerXML.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDades)).EndInit();
             this.gbDades.ResumeLayout(false);
             this.gbDades.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,9 +269,9 @@
         private System.Windows.Forms.NumericUpDown nudMax;
         private System.Windows.Forms.NumericUpDown nudMin;
         private System.Windows.Forms.TextBox txtTotalVol;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtProVolum;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbPromigPercentatge;
     }
 }
 
