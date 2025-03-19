@@ -1,31 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Embalses>
   <row>
-    <dia>2024-12-27T00:00:00</dia>
-    <estaci>Embassament de Darnius Boadella (Darnius)</estaci>
-    <nivell_absolut>136.39</nivell_absolut>
-    <percentatge_volum_embassat>178</percentatge_volum_embassat>
-    <volum_embassat>1087</volum_embassat>
+    <dia>2025-01-06T00:00:00</dia>
+    <estaci>Embassament de la Llosa del Cavall (Navès)</estaci>
+    <nivell_absolut>780,71</nivell_absolut>
+    <percentatge_volum_embassat>35,1</percentatge_volum_embassat>
+    <volum_embassat>28,05</volum_embassat>
   </row>
   <row>
-    <dia>2024-12-27T00:00:00</dia>
-    <estaci>Embassament de Sau (Vilanova de Sau)</estaci>
-    <nivell_absolut>388.41</nivell_absolut>
-    <percentatge_volum_embassat>163</percentatge_volum_embassat>
-    <volum_embassat>27</volum_embassat>
-  </row>
-  <row>
-    <dia>2024-12-27T00:00:00</dia>
-    <estaci>Embassament de Siurana (Cornudella de Montsant)</estaci>
-    <nivell_absolut>460.16</nivell_absolut>
-    <percentatge_volum_embassat>97</percentatge_volum_embassat>
-    <volum_embassat>118</volum_embassat>
-  </row>
-  <row>
-    <dia>2024-12-27T00:00:00</dia>
-    <estaci>Embassament de Riudecanyes</estaci>
-    <nivell_absolut>205.16</nivell_absolut>
-    <percentatge_volum_embassat>231</percentatge_volum_embassat>
-    <volum_embassat>123</volum_embassat>
+    <dia>2025-01-06T00:00:00</dia>
+    <estaci>Embassament de Foix (Castellet i la Gornal)</estaci>
+    <nivell_absolut>100,21</nivell_absolut>
+    <percentatge_volum_embassat>95</percentatge_volum_embassat>
+    <volum_embassat>3,55</volum_embassat>
   </row>
 </Embalses>

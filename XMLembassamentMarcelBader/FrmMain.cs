@@ -24,7 +24,7 @@ namespace XMLembassamentMarcelBader
         }
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            dateTimePicker2.Enabled = cbInterval.Checked;
+            dateTimePicker2.Enabled = cbInterval.Checked;            
         }
         private void btnExaminar_Click(object sender, EventArgs e)
         {
@@ -41,7 +41,7 @@ namespace XMLembassamentMarcelBader
                     omplirListBox();
                     iniColumnas();
                     txtArxiu.Text = rutaArchivo;
-
+                    CargarFechaMasReciente();
                 }
                 else
                 {
@@ -63,8 +63,6 @@ namespace XMLembassamentMarcelBader
 
 
             return false;
-        
-            
         }
 
         private void iniColumnas()
@@ -116,7 +114,6 @@ namespace XMLembassamentMarcelBader
                 dgDades.Rows.Clear();
                 double total = 0;
                 double percentatgeEmbassament = 0;
-                double totalVolEmb = 0;
                 int veces = 0;
                 double totalAbs = 0;
                 string fechaSeleccionada = dateTimePicker1.Value.ToString("yyyy-MM-dd");
@@ -263,5 +260,27 @@ namespace XMLembassamentMarcelBader
                 MessageBox.Show("Selecciona una fila para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        private void CargarFechaMasReciente()
+        {
+            DateTime fechaMasReciente = DateTime.MinValue; 
+            XPathNodeIterator cursor = navegador.Select("//row/row/dia"); 
+
+            foreach (XPathNavigator nodo in cursor)
+            {
+                if (DateTime.TryParse(nodo.Value, out DateTime fechaNodo))
+                {
+                    if (fechaNodo > fechaMasReciente)
+                    {
+                        fechaMasReciente = fechaNodo; 
+                    }
+                }
+            }
+
+            if (fechaMasReciente != DateTime.MinValue)
+            {
+                dateTimePicker1.Value = fechaMasReciente;
+            }
+        }
+
     }
 }
