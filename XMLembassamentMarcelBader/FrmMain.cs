@@ -33,9 +33,38 @@ namespace XMLembassamentMarcelBader
                 string rutaArchivo = openFileDialog1.FileName;
                 document = new XPathDocument(rutaArchivo);    // objecte per a carregar el document XML a memòria
                 navegador = document.CreateNavigator();
-                omplirListBox();
-                iniColumnas();
+
+                bool tieneRows = navegador.Select("//row/row").Count > 0;
+
+                if (tieneRows)
+                {
+                    omplirListBox();
+                    iniColumnas();
+                    txtArxiu.Text = rutaArchivo;
+
+                }
+                else
+                {
+                    MessageBox.Show("El teu xml no te estructura correcta", "ERROR");
+                
+                }
+    
+                
             }
+        }
+
+
+        private bool comprobarXml()
+        {
+            bool esta = false;
+            
+
+
+
+
+            return false;
+        
+            
         }
 
         private void iniColumnas()
@@ -75,61 +104,97 @@ namespace XMLembassamentMarcelBader
         private void btnMostrar_Click(object sender, EventArgs e)
         {
 
-            dgDades.Rows.Clear();
-            float total = 0;
-            float percentatgeEmbassament = 0;
-            int veces = 0;
-            string fechaSeleccionada = dateTimePicker1.Value.ToString("yyyy-MM-dd");
 
-            string condicionEstaci = "";
-            if (llEstacio.SelectedItems.Count > 0)
+            if (cbInterval.Checked && dateTimePicker1.Value > dateTimePicker2.Value)
             {
-                List<string> condicionesEstaci = new List<string>();
-                foreach (var item in llEstacio.SelectedItems)
-                {
-                    condicionesEstaci.Add($"estaci = '{item.ToString()}'");
-                }
-                condicionEstaci = " and (" + string.Join(" or ", condicionesEstaci) + ")";
-            }
+                MessageBox.Show("La data inicial no pot ser posterior a la data final.",
+                "Error en interval de dates", MessageBoxButtons.OK, MessageBoxIcon.Error );
 
-            string query = $"//row/row[substring(dia, 1, 10) = '{fechaSeleccionada}' " +
-                           $"and number(percentatge_volum_embassat) >= {nudMin.Value} " +
-                           $"and number(percentatge_volum_embassat) <= {nudMax.Value} " +
-                           $"{condicionEstaci}]";
-
-            XPathExpression expr = navegador.Compile(query);
-            XPathNodeIterator cursor = navegador.Select(expr);
-
-            foreach (XPathNavigator nodo in cursor)
-            {
-                string dia = nodo.SelectSingleNode("dia")?.Value ?? "";
-                string estaci = nodo.SelectSingleNode("estaci")?.Value ?? "";
-                string nivellAbsolut = nodo.SelectSingleNode("nivell_absolut")?.Value ?? "";
-
-                float volumEmbassat = 0;
-                float percentatgeVolum = 0;
-
-                float.TryParse(nodo.SelectSingleNode("volum_embassat")?.Value, out volumEmbassat);
-                float.TryParse(nodo.SelectSingleNode("percentatge_volum_embassat")?.Value, out percentatgeVolum);
-
-                total += volumEmbassat;
-                percentatgeEmbassament += percentatgeVolum;
-                veces++;
-
-                dgDades.Rows.Add(dia, estaci, nivellAbsolut, percentatgeVolum, volumEmbassat);
-            }
-
-            if (veces > 0)
-            {
-                float promig = percentatgeEmbassament / veces;
-                txtProVolum.Text = promig.ToString("F2");
             }
             else
             {
-                txtProVolum.Text = "0.00";
-            }
+                dgDades.Rows.Clear();
+                double total = 0;
+                double percentatgeEmbassament = 0;
+                double totalVolEmb = 0;
+                int veces = 0;
+                double totalAbs = 0;
+                string fechaSeleccionada = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+                string fechaSeleccionadaInt = dateTimePicker2.Value.ToString("yyyy-MM-dd");
 
-            txtTotalVol.Text = total.ToString("F2");     
+                string condicionEstaci = "";
+                if (llEstacio.SelectedItems.Count > 0)
+                {
+                    List<string> condicionesEstaci = new List<string>();
+                    foreach (var item in llEstacio.SelectedItems)
+                    {
+                        condicionesEstaci.Add($"estaci = '{item.ToString()}'");
+                    }
+                    condicionEstaci = " and (" + string.Join(" or ", condicionesEstaci) + ")";
+                }
+
+                string query = "";
+
+
+                if (cbInterval.Checked == true)
+                {
+                    // Replace your current interval query with this:
+                    query = $"//row/row[" +
+                        $"(translate(substring(dia, 1, 10),'-','') >= translate('{fechaSeleccionada}','-','')) and " +
+                        $"(translate(substring(dia, 1, 10),'-','') <= translate('{fechaSeleccionadaInt}','-','')) and " +
+                        $"string(number(percentatge_volum_embassat)) != 'NaN' and " +
+                        $"number(percentatge_volum_embassat) >= {nudMin.Value} and " +
+                        $"number(percentatge_volum_embassat) <= {nudMax.Value} " +
+                        $"{condicionEstaci}]";
+                }
+                else
+                {
+                    query = $"//row/row[substring(dia, 1, 10) = '{fechaSeleccionada}' " +
+                    $"and number(percentatge_volum_embassat) >= {nudMin.Value} " +
+                    $"and number(percentatge_volum_embassat) <= {nudMax.Value} " +
+                    $"{condicionEstaci}]";
+                }
+
+                XPathExpression expr = navegador.Compile(query);
+                XPathNodeIterator cursor = navegador.Select(expr);
+
+                foreach (XPathNavigator nodo in cursor)
+                {
+                    string dia = nodo.SelectSingleNode("dia")?.Value ?? "";
+                    string estaci = nodo.SelectSingleNode("estaci")?.Value ?? "";
+                    double nivellAbsolut = (double)nodo.Evaluate("number(nivell_absolut)");
+                    double volumEmbassat = (double)nodo.Evaluate("number(volum_embassat)");
+                    double percentatgeVolum = (double)nodo.Evaluate("number(percentatge_volum_embassat)");
+
+                    totalAbs += nivellAbsolut;
+                    total += volumEmbassat;
+                    percentatgeEmbassament += percentatgeVolum;
+                    veces++;
+
+                    dgDades.Rows.Add(dia, estaci, nivellAbsolut, percentatgeVolum, volumEmbassat);
+                }
+
+                if (veces > 0)
+                {
+                    double promig = percentatgeEmbassament / veces;
+                    double promigAbs = totalAbs / veces;
+                    double promigVolEmb = total / veces;
+                    txtProVolum.Text = promig.ToString("F2");
+                    txtNivAbsAvg.Text = promigAbs.ToString("F2");
+                    txtTotalVol.Text = total.ToString("F2");
+                    txtTotalAbs.Text = totalAbs.ToString("F2");
+                    txtVolEmbAvg.Text = promigVolEmb.ToString("F2");
+                }
+                else
+                {
+                    txtProVolum.Text = "0.00";
+                    txtTotalAbs.Text = "0.00";
+                    txtTotalVol.Text = "0.00";
+                    txtVolEmbAvg.Text = "0.00";
+                    txtNivAbsAvg.Text = "0.00";
+
+                }
+            }             
         }
 
         private void btCrearXMLContingut_Click_1(object sender, EventArgs e)
